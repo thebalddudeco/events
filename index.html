@@ -288,7 +288,7 @@
     .section-heading {
       display: grid;
       gap: 0.9rem;
-      max-width: 54rem;
+      max-width: min(72rem, 100%);
       margin-bottom: 2.4rem;
     }
 
@@ -301,7 +301,9 @@
 
     h2 {
       font-size: clamp(3rem, 5.6vw, 6rem);
-      max-width: 10ch;
+      width: 100%;
+      max-width: none;
+      text-wrap: pretty;
     }
 
     .split {
@@ -406,7 +408,11 @@
       gap: 1.3rem;
       padding-top: 1.2rem;
       border-top: 1px solid var(--line);
-      max-width: 52rem;
+      max-width: min(82rem, 100%);
+    }
+
+    .cta-band h2 {
+      max-width: min(24ch, 100%);
     }
 
     .cta-band p {
