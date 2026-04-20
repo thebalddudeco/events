@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art of Advanced Fine Art Portrait Lighting | Event</title>
+  <meta
+    name="description"
+    content="Reserve your seat for The Art of Advanced Fine Art Portrait Lighting on Friday, June 5, 2026 in Brooklyn."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-soft: #0d0d0d;
+      --panel: rgba(255, 255, 255, 0.04);
+      --panel-soft: rgba(255, 255, 255, 0.025);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #f5f5f5;
+      --muted: #b5b5b5;
+      --soft: #8c8c8c;
+      --accent: #ffffff;
+      --max: 1480px;
+      --radius: 28px;
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 22%),
+        linear-gradient(180deg, #0d0d0d 0%, #040404 46%, #000000 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.015)),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 112px,
+          rgba(255, 255, 255, 0.02) 112px,
+          rgba(255, 255, 255, 0.02) 113px
+        );
+      mix-blend-mode: soft-light;
+      opacity: 0.38;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(calc(100% - 2.5rem), var(--max));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: rgba(0, 0, 0, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      width: min(calc(100% - 2rem), 100%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 0;
+    }
+
+    .brand {
+      font-size: 0.76rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.82);
+      white-space: nowrap;
+    }
+
+    .topbar-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.75rem 1.4rem;
+      color: var(--soft);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .topbar-meta span {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .topbar-meta span::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.38rem;
+      width: 0.32rem;
+      height: 0.32rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .hero {
+      min-height: calc(100svh - 58px);
+      display: grid;
+      align-items: end;
+      position: relative;
+      overflow: clip;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.72) 40%, rgba(0, 0, 0, 0.42) 68%, rgba(0, 0, 0, 0.72) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.28) 45%, rgba(0, 0, 0, 0.88) 100%);
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 26%;
+      filter: grayscale(1) contrast(1.08) brightness(0.74);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: clamp(7rem, 11vw, 10rem) 0 clamp(2.4rem, 5vw, 4.2rem);
+    }
+
+    .eyebrow {
+      margin: 0 0 1rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      max-width: 9.5ch;
+      font-size: clamp(4.3rem, 8vw, 8.9rem);
+    }
+
+    .hero-subhead {
+      max-width: 39rem;
+      margin: 1.25rem 0 0;
+      font-size: clamp(1.12rem, 1.9vw, 1.5rem);
+      line-height: 1.65;
+      color: #dedede;
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, max-content));
+      gap: 1rem 2.2rem;
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .hero-meta div {
+      display: grid;
+      gap: 0.32rem;
+    }
+
+    .hero-meta strong {
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .hero-meta span {
+      color: #f0f0f0;
+      line-height: 1.55;
+      font-size: 0.97rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    .button,
+    .button-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.25rem;
+      padding: 0.85rem 1.2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .button {
+      background: #ffffff;
+      color: #000000;
+      border: 1px solid #ffffff;
+      box-shadow: 0 16px 40px rgba(255, 255, 255, 0.12);
+    }
+
+    .button-ghost {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .button:hover,
+    .button-ghost:hover {
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      max-width: 42rem;
+      margin: 1rem 0 0;
+      color: rgba(255, 255, 255, 0.74);
+      line-height: 1.7;
+      font-size: 0.93rem;
+    }
+
+    .section {
+      padding: 5.2rem 0;
+      border-top: 1px solid var(--line);
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 0.9rem;
+      max-width: 54rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: clamp(3rem, 5.6vw, 6rem);
+      max-width: 10ch;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+      gap: clamp(1.8rem, 4vw, 4rem);
+      align-items: start;
+    }
+
+    .editorial-list {
+      display: grid;
+      gap: 1.3rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .editorial-list li {
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .editorial-list strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      font-size: 1.06rem;
+      color: #f2f2f2;
+    }
+
+    .editorial-list span {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 0.98rem;
+    }
+
+    .media-panel {
+      position: relative;
+      margin: 0;
+      min-height: 34rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+        #0a0a0a;
+    }
+
+    .media-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) contrast(1.12) brightness(0.86);
+    }
+
+    .media-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 36%;
+      background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.78));
+    }
+
+    .media-caption {
+      position: absolute;
+      left: 1.35rem;
+      right: 1.35rem;
+      bottom: 1.25rem;
+      z-index: 1;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .requirements {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem 2rem;
+    }
+
+    .requirement {
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .requirement strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      font-size: 1rem;
+      color: #f2f2f2;
+    }
+
+    .requirement p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 0.96rem;
+    }
+
+    .cta-band {
+      display: grid;
+      gap: 1.3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      max-width: 52rem;
+    }
+
+    .cta-band p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .footer-link {
+      margin-top: 1rem;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    @media (max-width: 1080px) {
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding-top: 6.5rem;
+      }
+
+      .hero-meta,
+      .split,
+      .requirements {
+        grid-template-columns: 1fr;
+      }
+
+      .media-panel {
+        min-height: 28rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(calc(100% - 1.25rem), var(--max));
+      }
+
+      .topbar-inner {
+        width: min(calc(100% - 1.25rem), var(--max));
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-meta {
+        justify-content: flex-start;
+      }
+
+      h1 {
+        max-width: 100%;
+        font-size: clamp(3.5rem, 14vw, 5.2rem);
+      }
+
+      .hero-subhead,
+      .hero-note {
+        max-width: 100%;
+      }
+
+      .cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button,
+      .button-ghost {
+        width: 100%;
+      }
+
+      .section {
+        padding: 4rem 0;
+      }
+
+      .media-panel {
+        min-height: 24rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand">The Bald Dude Co. · Workshop Event</div>
+      <div class="topbar-meta">
+        <span>Friday, June 5, 2026</span>
+        <span>4:00 PM - 9:00 PM ET</span>
+        <span>Brooklyn</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-media" aria-hidden="true">
+      <img src="download.png" alt="">
+    </div>
+
+    <div class="shell hero-content">
+      <p class="eyebrow">Limited enrollment figure-lighting intensive</p>
+      <h1>The Art of Advanced Fine Art Portrait Lighting</h1>
+      <p class="hero-subhead">
+        A live studio event focused on sculptural light, refined restraint, and tasteful nude portraiture.
+        Participants will work through five signature looks with a nude model in a controlled, private setting.
+      </p>
+
+      <div class="hero-meta">
+        <div>
+          <strong>Date</strong>
+          <span>Friday, June 5, 2026</span>
+        </div>
+        <div>
+          <strong>Time</strong>
+          <span>4:00 PM - 9:00 PM Eastern</span>
+        </div>
+        <div>
+          <strong>Location</strong>
+          <span>Private Brooklyn studio. Exact address shared after registration.</span>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a
+          class="button"
+          href="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhC92rJezRKmaaJZyn5sHEMCmSZy3W4HABG04bwfigmG5nKjcmVcrbWF2n2OiVcIxPY*"
+          target="_blank"
+          rel="noreferrer"
+        >Sign Required Agreement</a>
+        <a
+          class="button-ghost"
+          href="https://buy.stripe.com/7sY7sLetP9PteMh4rdds40q"
+          target="_blank"
+          rel="noreferrer"
+        >Reserve and Pay</a>
+        <a
+          class="button-ghost"
+          id="google-calendar"
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+        >Add to Google Calendar</a>
+        <a
+          class="button-ghost"
+          id="ics-download"
+          href="#"
+          download="fine-art-portrait-lighting-workshop.ics"
+        >Apple / Outlook / ICS</a>
+      </div>
+
+      <p class="hero-note">
+        Attendance is confirmed only after the confidentiality agreement and payment are both completed.
+        Because this is a nude-model workshop, participation is private, controlled, and release-based.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell split">
+      <div>
+        <div class="section-heading">
+          <p class="eyebrow">What The Event Covers</p>
+          <h2>Short on clutter. Heavy on atmosphere, control, and live shooting.</h2>
+          <p>
+            This event page stays intentionally lean. The workshop itself is not a lecture dump or a diagram archive.
+            It is a guided studio experience built around disciplined light placement, tasteful figure work, and selective image release.
+          </p>
+        </div>
+
+        <ul class="editorial-list">
+          <li>
+            <strong>Five signature lighting looks</strong>
+            <span>Chiaroscuro, side and rim light, raking light, low-key highlights, and controlled multi-light refinements.</span>
+          </li>
+          <li>
+            <strong>Live demonstration and guided shooting</strong>
+            <span>You will watch the setups unfold, then rotate into photographing the model inside the same controlled lighting environment.</span>
+          </li>
+          <li>
+            <strong>Private post-event gallery credit</strong>
+            <span>Selected tasteful frames may be released later in a private gallery with photographer credit. Unreleased images remain restricted.</span>
+          </li>
+        </ul>
+      </div>
+
+      <figure class="media-panel">
+        <img src="download%20%289%29.png" alt="Black and white fine art back study portrait">
+        <figcaption class="media-caption">
+          The session centers on shape, contour, and restraint rather than explicitness. The emphasis is on light, form, and visual control.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Before You Arrive</p>
+        <h2>Participation rules are part of the event, not an afterthought.</h2>
+        <p>
+          This workshop involves photographing a nude model. To protect the model, the studio environment, and every attendee,
+          the event runs under strict handling rules from arrival through final image release.
+        </p>
+      </div>
+
+      <div class="requirements">
+        <div class="requirement">
+          <strong>Signed agreement required</strong>
+          <p>Every participant must complete the confidentiality agreement before attending. No signed agreement means no entry.</p>
+        </div>
+        <div class="requirement">
+          <strong>No phones or social capture</strong>
+          <p>Phones are surrendered on arrival. No behind-the-scenes posting, no stories, and no unauthorized social media content.</p>
+        </div>
+        <div class="requirement">
+          <strong>Controlled file release</strong>
+          <p>SD cards are surrendered after shooting for file transfer. Participants do not leave with their full captures from the session.</p>
+        </div>
+        <div class="requirement">
+          <strong>Only approved selects may be shared later</strong>
+          <p>Released images chosen after review may be credited and used in portfolios or social media. Everything else remains unreleased.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="cta-band">
+        <p class="eyebrow">Reserve Your Seat</p>
+        <h2>Sign the agreement, reserve your place, and lock the date into your calendar.</h2>
+        <p>
+          This is a private, limited-capacity workshop. Final studio address details are shared after registration is completed.
+          If you want the full internal workshop document, the complete brief remains available separately.
+        </p>
+
+        <div class="cta-row">
+          <a
+            class="button"
+            href="https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhC92rJezRKmaaJZyn5sHEMCmSZy3W4HABG04bwfigmG5nKjcmVcrbWF2n2OiVcIxPY*"
+            target="_blank"
+            rel="noreferrer"
+          >Sign Agreement</a>
+          <a
+            class="button-ghost"
+            href="https://buy.stripe.com/7sY7sLetP9PteMh4rdds40q"
+            target="_blank"
+            rel="noreferrer"
+          >Reserve and Pay</a>
+          <a
+            class="button-ghost"
+            href="advanced-portrait-lighting-workshop-brief.html"
+          >View Full Workshop Brief</a>
+        </div>
+
+        <p class="footer-link">Private Brooklyn studio · Friday, June 5, 2026 · 4:00 PM - 9:00 PM ET</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const eventConfig = {
+      title: "The Art of Advanced Fine Art Portrait Lighting",
+      start: "2026-06-05T16:00:00-04:00",
+      end: "2026-06-05T21:00:00-04:00",
+      timezone: "America/New_York",
+      location: "Private Brooklyn studio. Exact address shared after registration.",
+      details:
+        "A live studio event on fine art portrait lighting with a nude model. Attendance requires a signed confidentiality agreement and completed registration. No phones or social media capture. Only approved released selects may be shared later."
+    };
+
+    function formatGoogleDate(value) {
+      return new Date(value).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
+    }
+
+    function formatIcsDate(value) {
+      return new Date(value).toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
+    }
+
+    function escapeIcsText(value) {
+      return value
+        .replace(/\\/g, "\\\\")
+        .replace(/\n/g, "\\n")
+        .replace(/,/g, "\\,")
+        .replace(/;/g, "\\;");
+    }
+
+    const googleCalendar = document.getElementById("google-calendar");
+    const icsDownload = document.getElementById("ics-download");
+
+    if (googleCalendar) {
+      const googleUrl = new URL("https://calendar.google.com/calendar/render");
+      googleUrl.searchParams.set("action", "TEMPLATE");
+      googleUrl.searchParams.set("text", eventConfig.title);
+      googleUrl.searchParams.set(
+        "dates",
+        `${formatGoogleDate(eventConfig.start)}/${formatGoogleDate(eventConfig.end)}`
+      );
+      googleUrl.searchParams.set("details", eventConfig.details);
+      googleUrl.searchParams.set("location", eventConfig.location);
+      googleUrl.searchParams.set("ctz", eventConfig.timezone);
+      googleCalendar.href = googleUrl.toString();
+    }
+
+    if (icsDownload) {
+      const icsLines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//The Bald Dude Co//Fine Art Portrait Lighting Event//EN",
+        "CALSCALE:GREGORIAN",
+        "BEGIN:VEVENT",
+        `UID:${Date.now()}@thebalddudeco.com`,
+        `DTSTAMP:${formatIcsDate(new Date().toISOString())}`,
+        `DTSTART:${formatIcsDate(eventConfig.start)}`,
+        `DTEND:${formatIcsDate(eventConfig.end)}`,
+        `SUMMARY:${escapeIcsText(eventConfig.title)}`,
+        `DESCRIPTION:${escapeIcsText(eventConfig.details)}`,
+        `LOCATION:${escapeIcsText(eventConfig.location)}`,
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ];
+
+      const blob = new Blob([icsLines.join("\r\n")], { type: "text/calendar;charset=utf-8" });
+      icsDownload.href = URL.createObjectURL(blob);
+    }
+  </script>
+</body>
+</html>
